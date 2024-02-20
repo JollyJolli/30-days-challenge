@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Neumorphism Login Form | CodingStella</title>
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+      --primary-color: #c6c3c3;
+      --second-color: #ffffff;
+      --black-color: #000000;
+    }
+
+    body {
+      background-image: url("https://codingstella.com/wp-content/uploads/2024/01/download-6-scaled.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--second-color);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .login_box {
+      position: relative;
+      width: 450px;
+      backdrop-filter: blur(25px);
+      border: 2px solid var(--primary-color);
+      border-radius: 15px;
+      padding: 7.5em 2.5em 4em 2.5em;
+      color: var(--second-color);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+
+    .login-header span {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .input_box {
+      position: relative;
+      margin-bottom: 1.5em;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 0.75em 0.5em;
+      border-radius: 10px;
+      background-color: var(--second-color);
+      color: var(--black-color);
+      font-size: 1rem;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-field:focus {
+      outline: none;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .label {
+      position: absolute;
+      top: 0;
+      left: 0.5em;
+      padding: 0.75em 0.5em;
+      background-color: var(--second-color);
+      color: var(--black-color);
+      font-size: 1rem;
+      pointer-events: none;
+            transition: 0.2s ease-out;
+          }
+
+          .input-field + .label,
+          .input-field:focus + .label {
+            transform: translateY(-1.5em);
+            padding: 0 0.5em;
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            background-color: var(--second-color);
+          }
+
+          .icon {
+            position: absolute;
+            top: 50%;
+            right: 1.5em;
+            transform: translateY(-50%);
+            font-size: 1.25rem;
+            color: var(--primary-color);
+          }
+
+          .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5em;
+          }
+
+          .remember-me {
+            display: flex;
+            align-items: center;
+          }
+
+          #remember {
+            margin-right: 0.5em;
+          }
+
+          .forgot {
+            font-size: 0.875rem;
+          }
+
+          .input_box:last-child {
+            margin-bottom: 0;
+          }
+
+          .input-submit {
+            width: 100%;
+            padding: 0.75em 0;
+            border-radius: 10px;
+            background-color: var(--primary-color);
+            color: var(--second-color);
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.2s ease-out;
+          }
+
+          .input-submit:hover {
+            background-color: var(--second-color);
+            color: var(--primary-color);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+          }
+
+          .register {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.875rem;
+          }
+
+          .register a {
+            color: var(--primary-color);
+            margin-left: 0.5em;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="wrapper">
+          <div class="login_box">
+            <div class="login-header">
+              <span>Login</span>
+            </div>
+
+            <div class="input_box">
+              <input type="text" id="user" class="input-field" required>
+              <label for="user" class="label">Username</label>
+              <i class="bx bx-user icon"></i>
+            </div>
+
+            <div class="input_box">
+              <input type="password" id="pass" class="input-field" required>
+              <label for="pass" class="label">Password</label>
+              <i class="bx bx-lock-alt icon"></i>
+            </div>
+
+            <div class="remember-forgot">
+              <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+              </div>
+
+              <div class="forgot">
+                <a href="#">Forgot password?</a>
+              </div>
+            </div>
+
+            <div class="input_box">
+              <input type="submit" class="input-submit" value="Login">
+            </div>
+
+            <div class="register">
+              <span>Don't have an account? <a href="#">Register</a></span>
+            </div>
+          </div>
+        </div>
+      </body>
+      </html>
